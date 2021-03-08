@@ -18,7 +18,7 @@ class Api::V1::TodosController < ApplicationController
   end
 
   def update
-    todos = Todo.find(params[:id])
+    todo = Todo.find(params[:id])
     if todo.update(todo_params)
       render json: todo
     else
